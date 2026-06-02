@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Math Academy India</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI, sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    color:#333;
+}
+
+header{
+    background:white;
+    padding:15px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    position:sticky;
+    top:0;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#2563eb;
+}
+
+nav a{
+    text-decoration:none;
+    margin-left:20px;
+    color:#444;
+    font-weight:500;
+}
+
+.hero{
+    min-height:85vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:60px 8%;
+}
+
+.hero-text{
+    max-width:550px;
+}
+
+.hero-text h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.hero-text span{
+    color:#2563eb;
+}
+
+.hero-text p{
+    font-size:18px;
+    line-height:1.6;
+    margin-bottom:30px;
+}
+
+.btn{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.hero-image{
+    font-size:180px;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    padding:40px 8%;
+}
+
+.stat{
+    background:white;
+    padding:25px;
+    text-align:center;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.stat h2{
+    color:#2563eb;
+}
+
+.section-title{
+    text-align:center;
+    margin-top:50px;
+    margin-bottom:30px;
+    font-size:40px;
+}
+
+.classes{
+    padding:20px 8% 60px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    color:#2563eb;
+    margin-bottom:10px;
+}
+
+.features{
+    padding:60px 8%;
+    background:white;
+}
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.feature{
+    padding:25px;
+    border-radius:15px;
+    background:#f5f7fb;
+}
+
+footer{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:30px;
+    margin-top:50px;
+}
+
+#counter{
+    color:#2563eb;
+    font-weight:bold;
+}
+
+@media(max-width:900px){
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .hero-image{
+        margin-top:30px;
+        font-size:120px;
+    }
+
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">📘 Math Academy India</div>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Classes</a>
+        <a href="#">Courses</a>
+        <a href="#">Quiz</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-text">
+        <h1>Learn Mathematics <span>Class 1–12</span></h1>
+
+        <p>
+            India's complete mathematics learning platform with
+            lessons, quizzes, notes, AI help, and chapter-wise
+            practice for every class.
+        </p>
+
+        <button class="btn" onclick="startLearning()">
+            Start Learning
+        </button>
+    </div>
+
+    <div class="hero-image">
+        🧮
+    </div>
+</section>
+
+<section class="stats">
+
+    <div class="stat">
+        <h2>12</h2>
+        <p>Classes</p>
+    </div>
+
+    <div class="stat">
+        <h2>500+</h2>
+        <p>Lessons</p>
+    </div>
+
+    <div class="stat">
+        <h2>1000+</h2>
+        <p>Questions</p>
+    </div>
+
+    <div class="stat">
+        <h2 id="counter">0</h2>
+        <p>Students</p>
+    </div>
+
+</section>
+
+<h2 class="section-title">Choose Your Class</h2>
+
+<section class="classes">
+
+<div class="card"><h3>Class 1</h3><p>Basic Numbers</p></div>
+<div class="card"><h3>Class 2</h3><p>Addition & Division</p></div>
+<div class="card"><h3>Class 3</h3><p>Fractions & Time</p></div>
+<div class="card"><h3>Class 4</h3><p>Decimals & Geometry</p></div>
+<div class="card"><h3>Class 5</h3><p>Factors & Multiples</p></div>
+<div class="card"><h3>Class 6</h3><p>Integers & Algebra</p></div>
+<div class="card"><h3>Class 7</h3><p>Ratios & Equations</p></div>
+<div class="card"><h3>Class 8</h3><p>Mensuration</p></div>
+<div class="card"><h3>Class 9</h3><p>Polynomials</p></div>
+<div class="card"><h3>Class 10</h3><p>Trigonometry</p></div>
+<div class="card"><h3>Class 11</h3><p>Functions</p></div>
+<div class="card"><h3>Class 12</h3><p>Calculus</p></div>
+
+</section>
+
+<section class="features">
+
+<h2 class="section-title">Platform Features</h2>
+
+<div class="feature-grid">
+
+<div class="feature">
+<h3>📚 Smart Lessons</h3>
+<p>Easy explanations with examples.</p>
+</div>
+
+<div class="feature">
+<h3>📝 Practice Tests</h3>
+<p>Chapter-wise quizzes and tests.</p>
+</div>
+
+<div class="feature">
+<h3>🤖 AI Tutor</h3>
+<p>Ask math questions instantly.</p>
+</div>
+
+<div class="feature">
+<h3>🏆 Progress Tracking</h3>
+<p>Track learning achievements.</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+    <h3>Math Academy India</h3>
+    <p>Learn • Practice • Succeed</p>
+</footer>
+
+<script>
+
+function startLearning(){
+    alert("Welcome to Math Academy India!");
+}
+
+let count = 0;
+
+let interval = setInterval(() => {
+
+    count += 25;
+
+    document.getElementById("counter").innerText = count;
+
+    if(count >= 5000){
+        clearInterval(interval);
+    }
+
+},20);
+
+</script>
+
+</body>
+</html>
